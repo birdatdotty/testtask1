@@ -1,0 +1,33 @@
+QPair<int,int> size -> row,column
+QPair<int,int> pair -> row,column
+
+class Item
+{
++ Item(QString name, QString img, QPair<int,int> size, int count = 1);
++ Item(Item*);
++ Item();
+
++ void update(QString name, QString img, QPair<int,int> size, int count = 1);
+
++ QPair<int,int> getSize() const;
++ QString getName() const;
++ QString getImg() const;
++ int getCount() const;
++ QPair<int,int> getSize();
+    
++ void countDown(int n = 1);
++ void CountInc(int n = 1);
+
++ void setCount(int newCount);
+
++ QPixmap *pixmap;
+
+~ QString name; // тип предмета
+~ QString img; // путь к изображению
+~ QPair<int,int> size; // количество ячеек по осям row, column
+}
+
+
+
+
+class 

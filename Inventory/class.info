@@ -1,0 +1,44 @@
+class ItemBase
+{
++ ItemBase(...);
++ void addCell(CellBase* cell);
++ void countDown(int n = 1);
++ void CountInc(int n = 1);
++ void repaintCells();
+
+- QPixmap *pixmap;
+- QString name; // тип предмета
+- QString img; // путь к изображению
+- QPair<int,int> size; // количество ячеек по осям row, column
+- int count;
+- QVector<CellBase*> cells;
+}
+
+
+class CellBase: QWidget
+{
++ CellBase(ItemBase*, QPair<int,int> part);
+
+~ void paintEvent(QPaintEvent*) override;
+~ void dragEnterEvent(QDragEnterEvent *event) override;
+~ void mousePressEvent(QMouseEvent *event) override;
+
+~ Item* item;
+~ QPair<int,int> part;
+~ void repainCell();
++ insert(CellBase*, QPair<int,int> posotion)
+}
+
+class CellInventar: public CellBase
+{
+~ void dropEvent(QDropEvent *event) override;
+}
+
+class Inventory : public QWidget
+{
++ test(...);
+
+- InventarBase* map[INVETAR_ROW][INVETAR_COLUMN];
+}
+
+
